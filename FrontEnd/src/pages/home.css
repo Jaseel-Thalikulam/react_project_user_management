@@ -1,0 +1,35 @@
+.profile{
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+#logout {
+    margin: 5px;
+   margin-left: auto;
+    color: #ffffff;
+    background: #d8d9e4; /* Deep purple button background */
+    width: 100px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #logout:hover{
+    background-color: #e53935;
+  }
+
+
+#homeHead{
+    
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 15px;
+  
+}
+
+

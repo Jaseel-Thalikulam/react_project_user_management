@@ -1,0 +1,147 @@
+body {
+  background-color: #f7f7f7;
+  color: #333333;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.table {
+  width: 100%;
+  padding: 30px;
+  border-collapse: collapse;
+}
+
+.test {
+  padding: 40px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #e5e5e5; /* Light grayish border */
+  padding: 8px;
+}
+
+.table th {
+  text-align: left;
+  background-color: #5c6ac4; /* Deep purple header background */
+  color: #ffffff; /* White text color */
+  font-weight: bold;
+}
+
+.table thead {
+  text-align: left;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #e5e5e5; /* Light grayish border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 500px;
+  float: right;
+}
+
+#close {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  float: right;
+}
+
+#close:hover {
+  cursor: pointer;
+  color: #dd3c59; /* Reddish hover color */
+}
+
+
+#logouts {
+  margin: 5px;
+ margin-left: auto;
+  color: #ffffff;
+  background: #d8d9e4; /* Deep purple button background */
+  width: 100px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#logouts:hover{
+  background-color: #e53935;
+}
+
+#addUser {
+  width: 60px;
+  background: #4caf50; /* Green button background */
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.header h1{
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 15px;
+
+}
+
+.userDelete {
+  width: 60px;
+  background: #e53935; /* Dark red button background */
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.editUser {
+  width: 60px;
+  background: #2979ff; /* Blue button background */
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.adminHome {
+  margin-left: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.header {
+  display: flex;
+  align-items: center;
+  background-color:  #5c6ac4; /* Blue header background */
+  height: 3rem;
+  margin-bottom: 10px;
+}
+.table-container {
+  padding: 1rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #e5e5e5;
+  padding: 0.8rem;
+}
+
+.table th {
+  background-color: #5c6ac4;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    font-size: 0.9rem;
+  }
+}

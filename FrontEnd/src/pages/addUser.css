@@ -1,0 +1,57 @@
+.addUser {
+  display: flex;
+  justify-content: center;
+}
+
+.addUser form {
+  margin-top: 50px;
+  padding: 20px;
+  width: 400px;
+  border: 2px solid #333333; /* Dark gray border */
+  border-radius: 5px;
+}
+
+.addUser input {
+  padding: 10px;
+  border: 1px solid #dddddd; /* Light gray border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.addUser button {
+  color: #ffffff;
+  background: #2979ff; /* Blue button background */
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addUser h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.adminHomes {
+  margin-left: 10px;
+  font-family: 'Arial', sans-serif;
+  color:#dddddd ;
+}
+
+.adminHomes:hover{
+  color:white ;
+}
+
+.adminHomes:hover {
+  cursor: pointer;
+}
+
+
+

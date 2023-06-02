@@ -1,0 +1,52 @@
+/* Header */
+
+  
+  .adminHomes {
+    cursor: pointer;
+  }
+  
+
+  
+  .propage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .proimage {
+    margin-bottom: 20px;
+  }
+  
+  .proimage img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px;
+  }
+  
+
+
+  
+  .imgUpload {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .prodata {
+    text-align: center;
+  }
+  
+  .prodata h3 {
+    margin: 5px 0;
+  }
+  
+  .Toastify__toast-container {
+    z-index: 9999;
+  }
+  

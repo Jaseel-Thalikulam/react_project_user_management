@@ -12,10 +12,19 @@ function LoginComponenet({handlesubmit,setValue,value}) {
   useEffect(() => {
     
     const veryfyUser = async ()=>{
-       if(!cookies.jwt){
+       if(!cookies.jwt && !cookies.jwtadmin){
       navigate('/login')
        }else{
         
+        window.onbeforeunload = null; // Remove the previous event handler
+
+        // Add a new event handler to navigate out of the site
+        window.onbeforeunload = function () {
+          if (!cookies.jwt && !cookies.jwtadmin) {
+            return null; // Allow the user to leave the site
+          }
+        };
+         
          const { data } = await axios.post('http://localhost:4000', {}, { withCredentials: true })
          console.log(data)
      if(!data.status){

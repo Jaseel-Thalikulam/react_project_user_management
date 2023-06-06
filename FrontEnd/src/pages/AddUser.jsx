@@ -24,7 +24,7 @@ function AddUser() {
           
             
          const {data} = await axios.post('http://localhost:4000/register',{
-             ...value,isAdmin:true
+             ...value
          },
          {withCredentials: true})
 

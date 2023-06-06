@@ -120,9 +120,9 @@ module.exports.login = async (req, res, next) => {
 module.exports.register = async (req, res) => {
     try {
 
-       const { email, password, phone, firstname, isAdmin } = req.body;
+       const { email, password, phone, firstname} = req.body;
 const user = await UserModel.create({ email, password, phone, firstname });
-console.log(isAdmin);
+
 
 
         res.status(201).json({ user: user, created: true })

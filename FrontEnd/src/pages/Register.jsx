@@ -28,7 +28,7 @@ const generateError = (err) => toast.error(err,{
         try {
         
          const {data} = await axios.post('http://localhost:4000/register',{
-             ...value,isAdmin:false
+             ...value
          },
          {withCredentials: true})
 

@@ -4,7 +4,7 @@ const { uploadOptions } = require('../Middlewares/multer')
 
 
 const multer = require('multer')
-const upload = multer({ dest: '../uploads/'})
+
 const router = require('express').Router()
 router.post('/',checkUser)
 router.post('/register',register)

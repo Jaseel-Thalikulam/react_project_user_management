@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {ToastContainer, toast} from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { setUserDetails } from '../redux/userSlice'
+import { useCookies } from 'react-cookie'
 function Register() {
   const dispatch = useDispatch()
-    const navigate = useNavigate()
+  const navigate = useNavigate()
+  const [cookies,setCookie,removeCookie] = useCookies([])
+
+
     const [value,setValue] = useState({
         email:'',
         firstname:'',
@@ -24,7 +28,7 @@ const generateError = (err) => toast.error(err,{
         try {
         
          const {data} = await axios.post('http://localhost:4000/register',{
-             ...value
+             ...value,isAdmin:false
          },
          {withCredentials: true})
 
@@ -56,7 +60,7 @@ const generateError = (err) => toast.error(err,{
                   image:''
               })
           )
-            navigate('/')
+            navigate('/login')
          }
 
         } catch (error) {

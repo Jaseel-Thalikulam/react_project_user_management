@@ -26,7 +26,7 @@ function LoginComponenet({handlesubmit,setValue,value}) {
         };
          
          const { data } = await axios.post('http://localhost:4000', {}, { withCredentials: true })
-         console.log(data)
+   
      if(!data.status){
       removeCookie('jwt')
       navigate('/login')

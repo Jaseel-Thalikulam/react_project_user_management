@@ -6,11 +6,8 @@ require('dotenv').config();
 const secretKey = process.env.SECRET_KEY;
 const secretKeyAdmin = process.env.SECRET_KEY_ADMIN;
 
-
-
 module.exports.checkUser = (req, res, next) => {
   const tokenAdmin = req.cookies.jwtadmin
-
   const token = req.cookies.jwt
   
   if (token) {
@@ -20,7 +17,7 @@ module.exports.checkUser = (req, res, next) => {
 
         res.json({ status: false })
 
-        console.log("Token verify Failed")
+        console.log("Token verification Failed")
 
       } else {
 
@@ -33,7 +30,7 @@ module.exports.checkUser = (req, res, next) => {
 
             res.json({ status: true, user: user })
             next()
-          } else {
+          } else { 
 
 
             console.log(user.user)

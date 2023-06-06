@@ -24,7 +24,7 @@ function AddUser() {
           
             
          const {data} = await axios.post('http://localhost:4000/register',{
-             ...value
+             ...value,isAdmin:true
          },
          {withCredentials: true})
 
@@ -69,7 +69,7 @@ function AddUser() {
       }}>Go Back</span>
 
      <button id='logouts' onClick={() => {
-       removeCookie('jwt')
+       removeCookie('jwtadmin')
        navigate('/login')
       }}>Log out</button>
       </div>

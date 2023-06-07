@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import {ToastContainer, toast} from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { setUserDetails } from '../redux/userSlice'
-import { useCookies } from 'react-cookie'
+
 function Register() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const [cookies,setCookie,removeCookie] = useCookies([])
+
 
 
     const [value,setValue] = useState({
@@ -54,7 +54,7 @@ const generateError = (err) => toast.error(err,{
             dispatch(
               setUserDetails({
                   id:data.user._id,
-                  id:data.user.firstname,
+                  firstname:data.user.firstname,
                   email:data.user.email,
                   phone:data.user.phone,
                   image:''

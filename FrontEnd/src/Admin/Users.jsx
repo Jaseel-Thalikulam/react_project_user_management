@@ -58,7 +58,7 @@ function Users() {
 
     axios.post('http://localhost:4000/edit-user', {
       ...value
-    }).then((response) => {
+    },{withCredentials:true}).then((response) => {
 
       if (response.data.status) {
 

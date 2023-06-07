@@ -159,6 +159,7 @@ module.exports.deleteUser = (req, res, next) => {
 
 
 module.exports.editUser = async (req, res, next) => {
+ 
     const { id, email, phone, firstname } = req.body
 
     if (phone) {

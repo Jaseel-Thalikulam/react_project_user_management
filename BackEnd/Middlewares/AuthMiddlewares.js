@@ -59,14 +59,15 @@ module.exports.checkUser = (req, res, next) => {
 module.exports.isAdmin = (req,res,next) => {
 
   const tokenAdmin = req.cookies.jwtadmin
-
+  
   if (tokenAdmin) {
     jwt.verify(tokenAdmin, secretKeyAdmin, async (err, decodedToken) => {
       if (err) {
-
+        
         res.json({ status: false })
-
+        
       } else {
+      
 
 
         const user = UserModel.find({ _id: decodedToken.id })
@@ -86,7 +87,7 @@ module.exports.isAdmin = (req,res,next) => {
       }
     })
   } else {
-
+    console.log("Token unavilable From IsAdmin")
     res.json({ status: false })
 
   }

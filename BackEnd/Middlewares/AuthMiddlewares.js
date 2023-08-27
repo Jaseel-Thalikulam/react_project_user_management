@@ -67,9 +67,7 @@ module.exports.isAdmin = (req,res,next) => {
         res.json({ status: false })
         
       } else {
-      
-
-
+  
         const user = UserModel.find({ _id: decodedToken.id })
 
         
